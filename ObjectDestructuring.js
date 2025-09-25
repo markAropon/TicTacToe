@@ -7,12 +7,18 @@ const person = {
 };
 
 const { FirstName, LastName, age, city, hobbies } = person;
-console.log(`Full Name: ${FirstName} ${LastName}`);
-console.log(`Age: ${age}`);
-console.log(`City: ${city}`);
-console.log(`Hobbies: ${hobbies.join(', ')}`);
+let anime = [...hobbies , "anime"];//spread operator
+const formInput = {
+    firstName: FirstName,
+    lastName: LastName,
+    hobbies,
+    city: city,
+};
+
+console.log(formInput);
 
 greet(person);
 function greet({ FirstName, LastName }) {
     console.log(`Greetings! ${FirstName} ${LastName}!`);
+    console.log(anime);
 }
